@@ -9,6 +9,9 @@ USER root
 RUN mkdir /.tfc-agent && \
     chmod 770 /.tfc-agent
 
+ADD hooks /.tfc-agent/hooks
+
+
 RUN mkdir -p /home/tfc-agent/.tfc-agent 
 ADD --chown=tfc-agent:tfc-agent hooks /home/tfc-agent/.tfc-agent/hooks
 
