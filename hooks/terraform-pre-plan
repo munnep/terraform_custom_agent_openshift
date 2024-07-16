@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "--------------------- Running Terraform Pre Plan Hook ----------------------"
+# Hooks are run from the /home/tfc-agent/.tfc-agent/component/terraform/runs/run-<random>/config
+
+# example for mirroring used
+# Appends to the existing terraformrc file
+# /home/tfc-agent/.tfc-agent/component/terraform/runs/run-<random>/.terraformrc
+# new line is required to not collide with existing contents of the file
+
+# grep network_mirror "../.terraformrc" &>/dev/null || cat >> "../.terraformrc" << EOF
+
+# provider_installation {
+#   network_mirror {
+#     url = "https://tfe3-client.aws.munnep.com/"
+#   }
+# }
+
+# echo "the Home directory being used"
+# echo $HOME
+# echo ""
+# 
+
+
+echo "-------------------- Finished Terraform Pre Plan Hook ----------------------"
