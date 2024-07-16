@@ -11,10 +11,9 @@ RUN mkdir /.tfc-agent && \
 
 ADD hooks /.tfc-agent/hooks
 
-
-RUN mkdir -p /home/tfc-agent/.tfc-agent 
-ADD --chown=tfc-agent:tfc-agent hooks /home/tfc-agent/.tfc-agent/hooks
+# different because of openshift
+# RUN mkdir -p /home/tfc-agent/.tfc-agent 
+# ADD --chown=tfc-agent:tfc-agent hooks /home/tfc-agent/.tfc-agent/hooks
 
 USER tfc-agent
- 
 
