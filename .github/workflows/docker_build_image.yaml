@@ -15,7 +15,7 @@ on:
       - v*.*
  
 env:
-  REPOSITORY_NAME: "patrickmunne/custom-agent-openshift"
+  REPOSITORY_NAME: "patrickmunne3/custom-agent-openshift"
 
 jobs:
   push_to_registry:
