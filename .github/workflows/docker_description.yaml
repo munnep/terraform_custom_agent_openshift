@@ -9,7 +9,7 @@ on:
       - .github/workflows/docker_description.yml
 
 env:
-  REPOSITORY_NAME: "patrickmunne/custom-agent"
+  REPOSITORY_NAME: "patrickmunne3/custom-agent-openshift"
 
 jobs:
 
