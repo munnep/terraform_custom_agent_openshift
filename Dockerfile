@@ -7,12 +7,15 @@ USER root
 # RUN update-ca-certificates
 
 RUN mkdir /.tfc-agent && \
-    chmod 770 /.tfc-agent && \
+    chmod og+rw /.tfc-agent && \
+    #chmod 770 /.tfc-agent && \
     # one of the following is needed to make sure that the agent works on openshift. Documentation updated
     # chmod 775 -R /home/tfc-agent 
     chmod o+rx /home/tfc-agent 
 
 ADD hooks /.tfc-agent/hooks
+
+
 
 # different because of openshift
 # RUN mkdir -p /home/tfc-agent/.tfc-agent 
