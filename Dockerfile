@@ -13,9 +13,7 @@ RUN mkdir /.tfc-agent && \
     # chmod 775 -R /home/tfc-agent 
     chmod o+rx /home/tfc-agent 
 
-RUN mkdir /.tfc-agent/.terraform.d && \
-    chmod og+rw /.tfc-agent/.terraform.d
-    
+# Making sure that stacks works    
 RUN mkdir /.terraform.d && \
     chmod og+rw /.terraform.d
 
