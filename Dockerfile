@@ -16,6 +16,8 @@ RUN mkdir /.tfc-agent && \
 RUN mkdir /.tfc-agent/.terraform.d && \
     chmod og+rw /.tfc-agent/.terraform.d
     
+RUN mkdir /.terraform.d && \
+    chmod og+rw /.terraform.d
 
 ADD hooks /.tfc-agent/hooks
 
